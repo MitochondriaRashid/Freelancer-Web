@@ -1,0 +1,124 @@
+$white: #ffff;
+$btn-color: #fef4f4;
+$black: #2e2828;
+$bg: #503a3a;
+$red: #f65151;
+$medium-color: #ccc;
+$max-width: 1200px;
+
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;500;700;900&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+}
+
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: $white;
+}
+
+%btn {
+  font-size: 2rem;
+  font-weight: 700;
+  display: inline-block;
+  padding: 1rem 2rem;
+  margin-top: 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: $red;
+  color: $btn-color;
+  transition: 0.25s;
+}
+
+.btn-primary {
+  @extend %btn;
+
+  &-secondary {
+    display: inline-block;
+    padding: 1rem 2rem;
+    border: 1px solid $red;
+    color: $btn-color;
+    border-radius: 0.5rem;
+    transition: 0.25s;
+    background-color: $red;
+  }
+
+  &:hover {
+    background-color: $bg;
+  }
+}
+
+ul {
+  list-style: none;
+}
+
+.img {
+  width: 100%;
+}
+
+.logo {
+  display: inline-block;
+  width: 9rem;
+  height: 9rem;
+}
+
+p {
+  margin: 1.5rem 0;
+  font-weight: 500;
+  font-size: 1.4rem;
+  word-spacing: 0.2rem;
+}
+
+.container {
+  padding: 0 1.4rem;
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+
+  h2 {
+    display: inline-block;
+    font-size: 4rem;
+  }
+
+  & > h3 {
+    font-size: 2.5rem;
+  }
+  & > p {
+    font-size: 1.8rem;
+  }
+}
+
+.scroll-up {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+}
+
+.non-visible {
+  h4 {
+    display: inline-block;
+    position: relative;
+    bottom: 1rem;
+    cursor: default;
+    color: $btn-color;
+    border-bottom: 3.5px solid #f65151;
+  }
+}
+
+.about_text {
+  h1 {
+    font-size: 4rem;
+  }
+  p {
+    font-size: 2.5rem;
+    word-spacing: 2px;
+  }
+}

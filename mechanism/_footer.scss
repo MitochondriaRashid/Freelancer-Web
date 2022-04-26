@@ -1,0 +1,33 @@
+footer {
+  background-color: $bg;
+  color: $white;
+
+  .footer-down {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    padding: 2.5rem 15rem;
+  }
+
+  h3 {
+    font-size: 2rem !important;
+  }
+
+  .icon-box {
+    justify-self: right;
+
+    i {
+      padding: 1rem;
+      margin-right: 1.5rem;
+      border: 1px solid $white;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: all 0.5s;
+
+      &:hover {
+        background-color: $red;
+      }
+    }
+  }
+}

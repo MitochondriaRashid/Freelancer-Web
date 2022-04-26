@@ -1,0 +1,138 @@
+@mixin introdaction-boxes-default($gap) {
+  margin-top: 6rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+  align-items: center;
+  gap: $gap;
+}
+
+@mixin introdaction-box-default($hover, $color, $padding) {
+  cursor: default !important;
+  text-align: center;
+  padding: $padding;
+  transition: all 0.5s;
+  & > i {
+    margin-bottom: 1rem;
+    color: $red;
+  }
+  & > h3 {
+    font-size: 2.5rem;
+  }
+  & > p {
+    font-size: 1.8rem;
+  }
+
+  &:hover {
+    background-color: $hover;
+    color: $color;
+  }
+}
+
+#medium {
+  padding: 5rem 0rem;
+  align-items: center;
+  justify-content: center;
+
+  .introdaction {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    color: $black !important;
+    & h1 {
+      display: inline-block;
+      font-size: 4rem;
+    }
+
+    & p {
+      font-size: 2.5rem;
+      word-spacing: 2px;
+    }
+
+    h4 {
+      display: inline-block;
+      position: relative;
+      bottom: 1rem;
+      cursor: default;
+      color: $btn-color;
+      border-bottom: 3.5px solid #f65151;
+    }
+  }
+
+  .non-visible {
+    h4 {
+      display: inline-block;
+      position: relative;
+      bottom: 1rem;
+      cursor: default;
+      color: $btn-color;
+      border-bottom: 3.5px solid #f65151;
+    }
+  }
+
+  .introdaction-boxes {
+    @include introdaction-boxes-default(2rem);
+
+    .introdaction-box {
+      @include introdaction-box-default($bg, $white, 1rem);
+    }
+  }
+
+  .introdaction-boxes-down {
+    @include introdaction-boxes-default(0rem);
+    .introdaction-box {
+      @include introdaction-box-default(transparent, $black, 3rem);
+    }
+  }
+}
+
+#profile {
+  .introdaction-boxes {
+    @include introdaction-boxes-default(2rem);
+
+    .introdaction-box {
+      & i {
+        color: $btn-color;
+        position: relative;
+        border-radius: 50%;
+        background-color: $bg;
+        padding: 4rem;
+        transition: all 0.5s;
+        cursor: pointer;
+
+        & div {
+          position: absolute;
+          top: 0;
+          right: 0;
+          background-color: $red;
+          border-radius: 50%;
+          font-weight: 700;
+          font-size: 2.5rem;
+          padding: 1.5rem;
+          line-height: 1.5rem;
+          cursor: default;
+          transition: all 0.5s;
+        }
+
+        &:hover {
+          background-color: $red;
+
+          .step {
+            background-color: $black;
+          }
+        }
+      }
+
+      & h3 {
+        font-size: 2.5rem;
+        cursor: default;
+      }
+      & p {
+        font-size: 2rem;
+        cursor: default;
+      }
+    }
+  }
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="../mechanism/main.css" />
+
+    <script
+      src="https://kit.fontawesome.com/7e3a1b0938.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <header id="about-header">
+      <nav>
+        <div class="logo-container">
+          <img src="./Images/logo.png" alt="" class="logo" />
+        </div>
+        <div class="nav-links">
+          <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./projects.html">Projects</a></li>
+            <li><a href="#" class="active-2">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <section id="contact-me" class="container">
+      <div class="about_text">
+        <h1>Contact Me</h1>
+        <div class="non-visible">
+          <h4>dactionepselius</h4>
+        </div>
+        <p>Lorem ipsum dolor sit amet.</p>
+      </div>
+      <form
+        action="https://formspree.io/f/mvolqopd"
+        method="POST"
+        class="Contact-boxes"
+      >
+        <input type="text" placeholder="Name" name="fullname" class="input" />
+        <input
+          type="email"
+          placeholder="Email"
+          name="email"
+          class="input"
+          required
+        />
+        <input type="text" placeholder="Subject" name="subject" class="input" />
+        <input
+          type="tel"
+          placeholder="Phone"
+          name="phone-number"
+          class="input"
+        />
+
+        <textarea
+          class="message"
+          placeholder="Enter Message"
+          name="message"
+        ></textarea>
+        <button type="submit" style="color: #fff;">Submit</button>
+      </form>
+    </section>
+
+    <div class="contact-icons">
+      <div class="contact-icon">
+        <i class="fa-solid fa-at fa-3x" style="margin: 0rem 0rem 1rem"></i>
+        <h2>Email</h2>
+        <p>resid.sultanov18@gmamil.com</p>
+      </div>
+
+      <div class="contact-icon">
+        <i class="fa-solid fa-phone fa-3x" style="margin: 0rem 0rem 1rem"></i>
+        <h2>Phone</h2>
+        <p>+994-55-234-53-49</p>
+      </div>
+
+      <div class="contact-icon">
+        <i
+          class="fa-solid fa-address-card fa-3x"
+          style="margin: 0rem 0rem 1rem"
+        ></i>
+        <h2>Adress</h2>
+        <p>Azerbaijan, Baku</p>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-down">
+        <h3>Copyright © 2025. All Rights Reserved.</h3>
+        <div class="icon-box">
+          <i class="fa-brands fa-facebook fa-2x"></i>
+          <i class="fa-brands fa-instagram fa-2x"></i>
+          <i class="fa-brands fa-twitter fa-2x"></i>
+          <i class="fa-brands fa-youtube fa-2x"></i>
+        </div>
+      </div>
+    </footer>
+
+    <div class="scroll-up">
+      <a href="#top">
+        <i class="fa-solid fa-circle-up fa-5x" style="color: #f65151"></i>
+      </a>
+    </div>
+
+    <script src="./js/jquery.min.js"></script>
+  </body>
+</html>
